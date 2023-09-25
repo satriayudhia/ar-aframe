@@ -22,7 +22,10 @@
       renderer="antialias: true; alpha: true"
     >
       <a-assets>
-        <a-asset-item id="animated-asset" src="assets/asset.glb"></a-asset-item>
+        <a-asset-item
+          id="animated-asset"
+          src="assets/human_skeleton_high_detailed.glb"
+        ></a-asset-item>
       </a-assets>
 
       <a-camera gps-new-camera="gpsMinDistance: 5"></a-camera>
@@ -56,9 +59,7 @@
       </a-marker>
 
       <a-entity
-        look-at="[gps-new-camera]"
         gltf-model="#animated-asset"
-        scale="10 10 10"
         gps-new-entity-place="latitude: -6.303944; longitude: 106.719313"
         position="0 1 0"
       ></a-entity>
