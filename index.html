@@ -14,6 +14,7 @@
       type="text/javascript"
       src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"
     ></script>
+    <script type="text/javascript" src="basic.js"></script>
   </head>
   <body>
     <a-scene
@@ -57,12 +58,13 @@
         position="0 1.5 0"
       ></a-entity> -->
 
-      <a-gltf-model
+      <!-- <a-gltf-model
         src="#animated-asset"
         scale="10 10 10"
         gps-new-entity-place="latitude: -6.303944; longitude: 106.719313"
         position="0 1.5 0"
         rotation="0 90 0"
+        animation-mixer
       ></a-gltf-model>
 
       <a-gltf-model
@@ -71,7 +73,8 @@
         gps-new-entity-place="latitude: -6.303886; longitude: 106.719309"
         position="0 1.5 0"
         rotation="0 90 0"
-      ></a-gltf-model>
+        animation-mixer
+      ></a-gltf-model> -->
     </a-scene>
   </body>
 </html>
