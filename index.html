@@ -31,7 +31,14 @@
         <a-asset-item id="crate-mtl" src="assets/crate.mtl"></a-asset-item> -->
       </a-assets>
 
-      <a-camera gps-new-camera="gpsMinDistance: 5"></a-camera>
+      <a-camera
+        fov-change
+        id="camera"
+        gps-new-camera="gpsMinDistance: 5; simulateLatitude: 51.5; simulateLongitude: -0.08; simulateAltitude: 400;"
+        far="1000000"
+        look-controls-enabled="true"
+        look-controls="enabled: true; magicWindowTrackingEnabled: true; touchEnabled: true; mouseEnabled: true"
+      ></a-camera>
       <!-- <a-entity
         material="color: red"
         geometry="primitive: box"
