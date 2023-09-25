@@ -3,7 +3,7 @@
   <head>
     <title>AR.js A-Frame Location-based</title>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-    <!-- <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script> -->
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
     <script
@@ -14,7 +14,7 @@
       type="text/javascript"
       src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"
     ></script>
-    <!-- <script type="text/javascript" src="basic.js"></script> -->
+    <script type="text/javascript" src="basic.js"></script>
   </head>
   <body>
     <a-scene
@@ -31,13 +31,7 @@
         <a-asset-item id="crate-mtl" src="assets/crate.mtl"></a-asset-item> -->
       </a-assets>
 
-      <a-camera
-        fov-change
-        id="camera"
-        gps-new-camera="gpsMinDistance: 5"
-        look-controls-enabled="true"
-        look-controls="enabled: true; magicWindowTrackingEnabled: true; touchEnabled: true; mouseEnabled: true"
-      ></a-camera>
+      <a-camera gps-new-camera="gpsMinDistance: 5"></a-camera>
       <!-- <a-entity
         material="color: red"
         geometry="primitive: box"
@@ -64,7 +58,7 @@
         position="0 1.5 0"
       ></a-entity> -->
 
-      <a-gltf-model
+      <!-- <a-gltf-model
         src="#animated-asset"
         scale="10 10 10"
         gps-new-entity-place="latitude: -6.303944; longitude: 106.719313"
@@ -76,11 +70,11 @@
       <a-gltf-model
         src="#animated-asset"
         scale="10 10 10"
-        gps-new-entity-place="latitude: -6.303948; longitude: 106.719306"
+        gps-new-entity-place="latitude: -6.303886; longitude: 106.719309"
         position="0 1.5 0"
-        rotation="0 180 0"
+        rotation="0 90 0"
         animation-mixer
-      ></a-gltf-model>
+      ></a-gltf-model> -->
     </a-scene>
   </body>
 </html>
