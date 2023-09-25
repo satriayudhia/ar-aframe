@@ -6,6 +6,7 @@
     <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
     <script
       type="text/javascript"
       src="https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js"
@@ -39,6 +40,27 @@
         gps-projected-camera="gpsMinDistance: 1"
       >
       </a-camera>
+
+      <a-marker
+        id="animated-marker"
+        type="pattern"
+        preset="custom"
+        url="assets/marker.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerA"
+      >
+        <a-entity
+          id="bowser-model"
+          scale="7.994763466374159 7.994763466374159 7.994763466374159"
+          animation-mixer="loop: repeat"
+          gltf-model="#animated-asset"
+          class="clickable"
+          gesture-handler
+        ></a-entity>
+      </a-marker>
+
       <!-- <a-entity
         material="color: red"
         geometry="primitive: box"
@@ -72,6 +94,7 @@
         position="0 1.5 0"
         rotation="0 90 0"
         animation-mixer
+        gesture-handler
       ></a-gltf-model>
 
       <a-gltf-model
