@@ -26,6 +26,8 @@
           id="animated-asset"
           src="assets/human_skeleton_high_detailed.glb"
         ></a-asset-item>
+        <a-asset-item id="crate-obj" src="assets/crate.obj"></a-asset-item>
+        <a-asset-item id="crate-mtl" src="assets/crate.mtl"></a-asset-item>
       </a-assets>
 
       <a-camera gps-new-camera="gpsMinDistance: 5"></a-camera>
@@ -38,32 +40,21 @@
 
       <!-- <a-text value="Hello, World!"></a-text> -->
 
-      <a-marker
-        id="animated-marker"
-        type="pattern"
-        preset="custom"
-        url="assets/marker.patt"
-        raycaster="objects: .clickable"
-        emitevents="true"
-        cursor="fuse: false; rayOrigin: mouse;"
-        id="markerA"
-      >
-        <a-entity
-          id="bowser-model"
-          scale="7.994763466374159 7.994763466374159 7.994763466374159"
-          animation-mixer="loop: repeat"
-          gltf-model="#animated-asset"
-          class="clickable"
-          gesture-handler
-        ></a-entity>
-      </a-marker>
+      <!-- Using the asset management system. -->
+      <a-obj-model
+        src="#crate-obj"
+        mtl="#crate-mtl"
+        scale="10 10 10"
+        gps-new-entity-place="latitude: -6.303944; longitude: 106.719313"
+        position="0 1.5 0"
+      ></a-obj-model>
 
-      <a-entity
+      <!-- <a-entity
         gltf-model="#animated-asset"
         scale="10 10 10"
         gps-new-entity-place="latitude: -6.303944; longitude: 106.719313"
-        position="0 2 0"
-      ></a-entity>
+        position="0 1.5 0"
+      ></a-entity> -->
     </a-scene>
   </body>
 </html>
