@@ -21,6 +21,21 @@ window.onload = () => {
         longitude: e.detail.position.longitude,
       });
       document.querySelector("a-scene").appendChild(entity);
+
+      // Add a cylinder to the north of the initial GPS position
+      const entity2 = document.createElement("a-cylinder");
+      entity2.setAttribute("scale", {
+        x: 20,
+        y: 20,
+        z: 20,
+      });
+      entity2.setAttribute("color", "orange");
+      entity2.setAttribute("height", "1.5");
+      entity2.setAttribute("gps-new-entity-place", {
+        latitude: e.detail.position.latitude - 0.001,
+        longitude: e.detail.position.longitude,
+      });
+      document.querySelector("a-scene").appendChild(entity2);
     }
     testEntityAdded = true;
   });
