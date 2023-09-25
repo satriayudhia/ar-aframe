@@ -18,8 +18,8 @@
   </head>
   <body>
     <a-scene
-      vr-mode-ui="enabled: false"
-      arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false"
+      vr-mode-ui="enabled: true"
+      arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: true"
       renderer="antialias: true; alpha: true"
     >
       <a-assets>
@@ -31,7 +31,13 @@
         <a-asset-item id="crate-mtl" src="assets/crate.mtl"></a-asset-item> -->
       </a-assets>
 
-      <a-camera gps-new-camera="gpsMinDistance: 2"></a-camera>
+      <a-camera
+        id="camera1"
+        look-controls-enabled="true"
+        arjs-look-controls="smoothingFactor: 0.1"
+        gps-projected-camera="gpsMinDistance: 2"
+      >
+      </a-camera>
       <!-- <a-entity
         material="color: red"
         geometry="primitive: box"
@@ -61,16 +67,7 @@
       <a-gltf-model
         src="#animated-asset"
         scale="10 10 10"
-        gps-new-entity-place="latitude: -6.303944; longitude: 106.719313"
-        position="0 1.5 0"
-        rotation="0 90 0"
-        animation-mixer
-      ></a-gltf-model>
-
-      <a-gltf-model
-        src="#animated-asset"
-        scale="10 10 10"
-        gps-entity-place="latitude: -6.303886; longitude: 106.719309"
+        gps-new-entity-place="latitude: -6.303949; longitude: 106.719316"
         position="0 1.5 0"
         rotation="0 90 0"
         animation-mixer
