@@ -49,6 +49,19 @@ window.onload = () => {
         latitude: e.detail.position.latitude,
         longitude: e.detail.position.longitude + 0.001,
       });
+
+      const text = document.createElement("a-text");
+      const textScale = 100;
+      text.setAttribute("look-at", "[gps-new-camera]");
+      text.setAttribute("scale", {
+        x: textScale,
+        y: textScale,
+        z: textScale,
+      });
+      text.setAttribute("value", "HALLO WORLD");
+      text.setAttribute("align", "center");
+      entity3.appendChild(text);
+
       document.querySelector("a-scene").appendChild(entity3);
     }
     testEntityAdded = true;
