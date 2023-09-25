@@ -42,11 +42,7 @@ window.onload = () => {
       entity3.setAttribute("src", "#animated-asset");
       entity3.setAttribute("position", "0 1.5 0");
       entity3.setAttribute("rotation", "0 180 0");
-      entity3.setAttribute("scale", {
-        x: 10,
-        y: 10,
-        z: 10,
-      });
+      entity3.setAttribute("scale", "10 10 10");
       entity3.setAttribute("animation-mixer", "");
 
       entity3.setAttribute("gps-new-entity-place", {
