@@ -36,6 +36,24 @@ window.onload = () => {
         longitude: e.detail.position.longitude,
       });
       document.querySelector("a-scene").appendChild(entity2);
+
+      // Add a glb to the north of the initial GPS position
+      const entity3 = document.createElement("a-gltf-model");
+      entity3.setAttribute("src", "#animated-asset");
+      entity3.setAttribute("position", "0 1.5 0");
+      entity3.setAttribute("rotation", "0 180 0");
+      entity3.setAttribute("scale", {
+        x: 10,
+        y: 10,
+        z: 10,
+      });
+      entity3.setAttribute("animation-mixer", "");
+
+      entity3.setAttribute("gps-new-entity-place", {
+        latitude: e.detail.position.latitude,
+        longitude: e.detail.position.longitude + 0.001,
+      });
+      document.querySelector("a-scene").appendChild(entity3);
     }
     testEntityAdded = true;
   });
