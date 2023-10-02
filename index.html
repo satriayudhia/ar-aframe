@@ -15,13 +15,18 @@
       type="text/javascript"
       src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"
     ></script>
+    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
     <!-- <script type="text/javascript" src="basic.js"></script> -->
   </head>
   <body>
     <a-scene
-      vr-mode-ui="enabled: false"
-      arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: true"
-      renderer="antialias: true; alpha: true"
+      vr-mode-ui="enabled: false;"
+      loading-screen="enabled: false;"
+      renderer="logarithmicDepthBuffer: true;"
+      arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+      id="scene"
+      embedded
       gesture-detector
     >
       <a-assets>
